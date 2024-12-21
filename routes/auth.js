@@ -58,7 +58,7 @@ router.post('/signup', async (req, res) => {
         req.session.userId = user.userId;
     
         // Respond with success
-        return res.status(200).json({ message: 'Login successful', userId: user.userId });
+        return res.status(200).json({ message: 'Login successful', userId: user.userId, name: user.name });
       }
 
       // Handle any other unexpected account status
